@@ -33,6 +33,7 @@ $(function () {
                     $('#success > .alert-success')
                             .append('</div>');
                     $('#contactForm').trigger("reset");
+                     alert("Success Your Messsage has been Sent");
                 },
                 error: function () {
                     $('#success').html("<div class='alert alert-danger'>");
@@ -41,6 +42,7 @@ $(function () {
                     $('#success > .alert-danger').append($("<strong>").text("Sorry " + name + ", it seems that our mail server is not responding. Please try again later!"));
                     $('#success > .alert-danger').append('</div>');
                     $('#contactForm').trigger("reset");
+                     alert("Some Error Occured Please debug it");
                 },
                 complete: function () {
                     setTimeout(function () {
