@@ -15,7 +15,7 @@ $(function () {
             $this.prop("disabled", true);
 
             $.ajax({
-                url: "https://clsapps.github.io/Fix/contact.php",
+                url: "https://formsubmit.co/cls.apps.mail@gmail.com",
                 type: "POST",
                 data: {
                     name: name,
@@ -41,6 +41,7 @@ $(function () {
                             .append("</button>");
                     $('#success > .alert-danger').append($("<strong>").text("Sorry " + name + ", it seems that our mail server is not responding. Please try again later!"));
                     $('#success > .alert-danger').append('</div>');
+                    $('#contactForm').trigger("submit");
                     $('#contactForm').trigger("reset");
                      alert("Some Error Occured Please debug it");
                 },
