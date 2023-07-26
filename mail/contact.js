@@ -15,7 +15,7 @@ $(function () {
             $this.prop("disabled", true);
 
             $.ajax({
-                url: "contact.php",
+                url: "https://clsapps.github.io/Fix/contact.php",
                 type: "POST",
                 data: {
                     name: name,
