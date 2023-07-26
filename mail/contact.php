@@ -1,13 +1,12 @@
 <?php
-alert("Contact.php");
+echo "Contact";
 if(empty($_POST['name']) || empty($_POST['subject']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
   http_response_code(500);
- alert("Error Empty Fields detected");
+ echo "Error Empty Fields detected";
   exit();
 }
 
-alert("Contact.php ~> Collecting Variables");
-alert($_POST['name']);
+echo "Contact.php ~> Collecting Variables";
 $name = strip_tags(htmlspecialchars($_POST['name']));
 $email = strip_tags(htmlspecialchars($_POST['email']));
 $m_subject = strip_tags(htmlspecialchars($_POST['subject']));
@@ -20,10 +19,9 @@ $header = "From: $email";
 $header .= "Reply-To: $email";	
 
 if(!mail($to, $subject, $body, $header)){
-  alert("Contact.php ~> Mial Failled");
+  echo "Contact.php ~> Mial Failled";
   http_response_code(500);
 }
-else alert("Contact.php ~> Mial Success");
 
-alert("Contact.php ~> End");
+echo "Contact.php ~> End";
 ?>
